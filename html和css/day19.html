@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet"  href="css/player.css">
+</head>
+<body>
+    <script>
+        // 检查浏览器支持情况
+    if (window.sessionStorage) {
+        //浏览器支持sessionStorage
+    } else if (window.localStorage) {
+        //浏览器支持localStorage
+    }
+    </script>
+    
+
+    <input type="text" id="username">
+    <button id="setData">设置数据</button>
+    <button id="getData">获取数据</button>
+    <button id="delData">删除数据</button>
+    
+    <script>
+        var username = document.querySelector('#username');
+        //单击 "设置数据"按钮，设置数据
+        document.querySelector('#setData').onclick = function() {
+            var val = username.value; //获取username里面的值
+            window.sessionStorage.setItem('username',val);
+        
+        };
+        //单击“获取数据'按钮,获得数据
+        document.querySelector('#getData').onclick = function(){
+            alert(window.sessionStorage.getItem('username'));
+        ;}
+        //单击“删除数据”按钮，删除数据
+        document.querySelector('#delData').onclick = function() {
+            window.sessionStorage.removeItem('username');
+        
+        };
+    </script>
+    <hr>
+    <br>
+    <figure>
+        <figcaption>视频播放器</figcaption>
+        <div class="player">
+            <video src="video/1.mp4"></video>
+            <div class="controls">
+                <!-- 播放/暂停 -->
+                <a href="javascript:;" class="switch fa fa-play"></a>
+            <!-- 播放进度 -->
+            <div class="progress">
+                <div class="line"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- 当前播放时间/播放总时长 -->
+            <div class="timer">
+                <span class="current">00:00:00</span> / <span class="total">00:00:00</span>
+            </div>
+            <!-- 全屏/取消全屏 -->
+            <a href="javascript:;" class="expand fa fa-arrows-alt"></a>
+        </div>
+        </div>
+    </figure>
+
+    <script src="js/jquery-3.1.1/jquery-3.1.1/jquery.min.js"></script>
+    <script>
+        //获取元素
+        var video = $("video").get(0);  //把jquery对象 转换为DOM对象
+        //计算时分秒函数 formatTime
+        function formatTime(time) {
+            var h = Math.floor(time / 3600);
+            var m = Math.floor(time % 3600 /60);
+            var s = Math.floor(time % 60);
+            //00:00:00
+            return (h<10 ? "0" +h :h) + ":" + (m<10 ? "0" + m : m) + ":" + (s<10 ? "0" + s : s);
+        }
+        //当浏览器可以播放视频的时候，就让video显示出来，同时显示出视频的总时长
+        video.oncanplay = function() {
+            $("video").show();
+            var totalTime =formatTime(video.duration);
+            $(".total").html(totalTime);   //计算出来的总时长放入页面元素中
+        };
+
+        $(".switch").on("click",function() {
+        if ($(this).hasClass("fa-play")) {
+            video.play();                                           //播放
+            $(this).addClass("fa-pause").removeClass("fa-play");    //切换图标
+        } else {                                                    
+            video.pause();                                          //暂停
+            $(this).addClass("fa-play").removeClass("fa-pause");    //切换图标
+        }
+    });
+
+    video.ontimeupdate = function() {
+        var w = video.currentTime / video.duration * 100 + "%" ;
+         //计算公式 进度条的长度 = 当前播放的时长 / 视频总时长 * 100 + "%"
+        $(".line").css("width",w);
+        $(".current").html (formatTime(video.currentTime));
+    };
+   
+
+    $(".expand").on("click", function() {
+        if ($(this).hasClass("fa-arrows-alt")){
+            $(".player").get(0).requestFullscreen();                 //全屏显示
+            $(this).addClass("fa-compress").removeClass("fa-arrows-alt");
+        } else {
+            document.exitFullscreen();                               //取消全屏显示
+            $(this).addClass("fa-arrows-alt").removeClass("fa-compress");
+        }
+    });
+
+    video.onended = function () {
+        //当前的视频时长清零
+        video.currentTime  = 0;
+        //同时把播放按钮改为.fa-play 样式效果
+        $(".switch").addClass("fa-play").removeClass("fa-pause");
+    };
+
+
+    $(".bar").on("click",function(event) {
+        //1.获取单击的位置
+        var offset = event.offsetX;
+        //2.根据单击视频的播放位置计算要切换的时间
+        var current = offset / $(this).width() * video.duration;
+        //计算公式 当前播放位置 = 单击的位置 / .bar 盒子的长度 * 视频总时长
+        //3.把计算后的时间赋值给currentTime
+        video.currentTime = current;
+    })
+    </script>
+</body>
+</html>

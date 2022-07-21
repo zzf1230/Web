@@ -1,0 +1,133 @@
+.father {
+ width: auto;
+ height: auto;
+ 
+}
+.child {
+  width: 1900px;           
+  height: 20px;
+ 
+    /* float: left; */ /* 左浮动 */
+    /* float: right; */ /* 右浮动 */
+  }
+  .child1 {          
+  height: 20px;
+  margin: 0 auto;
+    background-color: orange;
+  }
+  .child2 {
+    width: 800px;           
+  height: 20px;
+  margin: 5px;
+  position: absolute;
+				left:30%;
+				top: 6%;
+				transform: translate(-20%,-20%);			
+    background-color: #1abc9c;
+  }
+  .child3 {
+    width: 800px;           
+  height: 30px;
+  margin: 5px;
+  position: absolute;
+				left:30%;
+				top: 10.5%;
+				transform: translate(-20%,-20%);	
+    background-color: pink;
+  }
+
+  .father1 {
+    width: 800px;
+    height: 430px;
+    margin: 5px;
+    left: 20%;
+    position: absolute;
+          left:30%;
+          top: 30%;
+          transform: translate(-20%,-20%);
+    background-color: orange;
+  }
+  .child4 {
+    width: 200px;
+    height: 300px;
+    float: left;
+    /* float: left; */ /* 左浮动 */
+    /* float: right; */ /* 右浮动 */
+  }
+  .child5 {
+    width: 220px;
+    height: 120px;
+ 
+    
+    background-color: yellow;
+  }
+  .child6 {
+    width: 250px;
+    height: 100px;
+    margin: 15px;
+    position: absolute;
+    left:35%;
+    top: 1.5%;
+    transform: translate(-20%,-20%);
+    background-color: #28c0dbf8;
+  }
+  .child7 {
+    width: 280px;
+    height: 428px;
+    margin: 15px;
+    position: absolute;
+    left:126%;
+    top: 72%;
+    transform: translate(-20%,-20%);
+    background-color: #205e97f8;
+  }
+
+  .child8 {
+    width: 220px;
+    height: 130px;
+    position: absolute;
+    left:5.5%;
+    top: 35%;
+    transform: translate(-20%,-20%);
+    background-color: yellow;
+  }
+  .child9 {
+    width: 250px;
+    height: 180px;
+    margin: 15px;
+    position: absolute;
+    left:15%;
+    top: 125%;
+    transform: translate(-20%,-20%);
+    background-color: #28c0dbf8;
+  }
+  .child10 {
+    width: 220px;
+    height: 170px;
+    position: absolute;
+    left:20%;
+    top: 130%;
+    transform: translate(-20%,-20%);
+    background-color: yellow;
+  }
+  .child11 {
+    width: 250px;
+    height: 140px;
+    margin: 15px;
+    position: absolute;
+    left:15%;
+    top: 110%;
+    transform: translate(-20%,-20%);
+    background-color: #28c0dbf8;
+  }
+  .footer {
+    width: 800px;
+    height: 20px;
+    margin: 15px;
+    position: absolute;
+    left:18%;
+    top: 99%;
+    transform: translate(-20%,-20%);
+    background-color: #28c0dbf8;
+    background: rgb(196, 196, 209);
+  }

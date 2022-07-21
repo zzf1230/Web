@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  全屏显示 -->
+    <style>
+        div:-webkit-full-screen {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/1.jpg" height="300" alt="">
+        <button id="full">全屏显示</button>
+        <button id="cancelFull">取消全屏</button>
+        <button id="isFull">是否全屏</button>
+    </div>
+
+    <script>
+        var div = document.querySelector('div');
+        document.querySelector('#full').onclick = function() {
+            if(div.requestFullscreen) {           //正常浏览器
+                div.requestFullscreen();
+        } else if(div.requestFullScreen) {    //webkit
+                div.webkitRequestFullScreen();
+        }  else if(div.requestFullScreen) {       //moz
+                div.mozRequestFullScreen();
+        } else if(div.requestFullscreen) {        //ms
+                div.msRequestFullscreen();
+        }  else if(div.requestFullScreen) {       //o
+                div.oReRequestFullScreen();
+        } else {
+            alert('暂不支持在您的浏览器中全屏');
+        }
+       }; 
+
+          //取消全屏
+    document.querySelector('#cancelFull').onclick = function(){
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        }else if(document.webkitcancelFullScreen) {
+            document.webkitcancelFullScreen();
+        }else if(document.mozCanceFullScreen) {
+            document.mozCancelFullScreen();
+        }else   if(document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }else   if(document.oCancelFullScreen) {
+            document.oCancelFullScreen();
+        } else {
+            alert('暂不支持您的浏览器');
+        }
+    };
+
+    //是否全屏
+    document.querySelector('#isFull').onclick = function () {
+        alert(document.webkitIsFullScreen);       //webkit
+    };
+    </script>
+ 
+    <!--  文件读取 -->
+    <!-- 选择上传文件 -->
+    <input type="file" multiple>
+    <script>
+        var file = document.querySelector('input');
+        file.onchange = function() {      //当用户选择文件后执行此事件
+            console.log(this.file);       //查看FileList对象
+        };
+
+        for(var i = 0,numFiles = file.length; i < numFiles; i++){
+            var file = files[i];
+            qwq
+        }
+
+
+        // FileReader对象
+        //1.初始化reader对象
+        var reader = new FileReader();
+        //2.读取文件内容
+        reader.readerAsText(文件对象);   //方式1：读取文本
+        reader.readerDataURL(文件对象);  //方式2：读取图片的缩略图
+        //3.将读取的内容显示到页面中
+        reader.onload = function() {     //读取成功时触发
+            div.innerHTML = this.result;  //将生成的内容显示到页面的div元素中
+            img.src = this.result;        //将生成的内容赋值为img图片的src
+        };
+    </script>
+
+        <!-- 读取文本文件 -->
+        <input type="file" multiple>
+        <div></div> 
+        <script>
+            var file = document.querySelector('input');
+            var div = document.querySelector('div');
+            file.onchange = function() {
+                var reader = new FileReader();
+                reader.readerAsText(this.file[0]);  //读取文本内容
+                reader.onload = function(){         //将读取的内容显示到页面中
+                    div.innerHTML = this.result;
+                };
+            };
+        </script>
+
+        <!--显示上传文件的缩略图 -->
+      <input type="file" multiple>
+      <img src="" alt="缩略图" width="100px" height="100px">
+      <script>
+          var file = document.querySelector('input');
+          var img = document.querySelector('img');
+          file.onchange = function() {
+              var reader = new FileReader();
+              reader.readerAsDataURL(this.file[0]);
+              reader.onload = function() {
+                  img.src = this.result;
+              };
+          };
+      </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 绝对定位：
+            先找到定位的父级，如果有这样的父类就以这个父类为参照物进行定位
+            有父级，父级没有定位，以浏览器窗口为参照物进行定位
+            特点：脱标，不占位;
+            改变标签的显示模式：具备行内块特点(在一行共存，宽高生效)
+            */
+            position: absolute;
+            right:100px;
+            top:0;
+          width: 200px;
+          height:200px;
+          background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <div class="box"></div>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+    <p>  测试  测试  测试  测试  测试  测试  测试  测试   </p>
+</body>
+</html>

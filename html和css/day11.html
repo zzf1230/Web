@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <!-- Bootstrap 核心css文件 -->
+ <link rel="stylesheet" href="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  
+ <!--Jquery 核心文件  -->
+ <!-- 引入bootstrap.min.js务必先引入jquery -->
+ <script src="js/jquery-3.1.1/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+
+ <!-- Bootstrap 核心js文件 -->
+<script src="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+<body>
+    <!-- 路径导航：在一个带有层次的导航结构中标明当前页面的位置 -->
+    <!-- 给<ol>有序或<ul>无序添加.breadcrumb可以实现“面包屑”效果 -->
+        <ol class="breadcrumb">
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">视频教程</a></li>
+            <li class="active">PHP实战</li>
+        </ol>
+
+
+
+<!-- 默认分页 将分页类.pagination 添加到<ul>标记上，可以实现分页效果-->
+    <!-- 添加.disabled类可以实现禁用状态 -->
+    <!-- 添加.active类可以实现激活状态 -->
+    <!-- 给<ul>添加.pagination-lg或.pagination-sm可以控制分页大小 -->
+        <ul class="pagination pagination-lg">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+        
+<br>
+        <!-- 翻页效果 -->
+        <!-- <li>添加.pager类，可以实现“上一页”和“下一页”效果。 -->
+            <!-- 给<li>添加.previous和.naxt可以实现两端对齐。 -->
+        <nav>
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">上一页</a></li>
+                <li class="next"><a href="#">下一页</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="pager">
+                <li class="disabled"><a href="#">上一页</a></li>
+                <li class=""><a href="#">下一页</a></li>
+            </ul>
+        </nav>
+    
+
+        <!--  标签-->
+        <!-- 通过类样式.label和.label-primary可以实现标签的效果和样式。 -->
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+<br>
+<br>
+
+        <!-- 概述
+            给链接.导航等元素嵌套<span class="badgr">元素
+                可以很醒目的展示新的或未读的信息条目。-->
+          <!-- 链接式徽章 -->
+        <a href="javascript:void(0)">新闻标题
+            <span class="badge">456</span>
+        </a>
+          <!-- 按钮式徽章 -->
+        <button type="button" class="btn btn-primary">未读信息
+            <span class="badge">1200</span>
+        </button>
+
+</body>
+</html>

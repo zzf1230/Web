@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .top{
+        margin:0 auto;
+        width: 500px;
+        /* height: 200px; */
+        background-color: pink;
+    }
+    .button{
+    height: 40px;
+    background-color: orange;
+}
+
+    .one{
+        float: left;
+        width: 250px;
+        height:200px;
+        background-color: green;
+    
+    }
+    .two{
+        float: right;
+        width: 250px;
+        height: 200px;
+        background-color: skyblue;
+      
+    }
+
+</style>
+
+</head>
+<body>
+
+    <!-- 清除浮动是指清除浮动带来的影响
+    当浮动子元素的父元素没有高度时，标准流元素会到顶部
+    -->
+   <div class="top">
+       <div class="one"></div>
+        <div class="two"></div>
+   </div>
+
+  <div class="button"></div>
+</body>
+</html>

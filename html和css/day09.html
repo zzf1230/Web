@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap 核心css文件 -->
+     <link rel="stylesheet" href="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  
+     <!--Jquery 核心文件  -->
+     <!-- 引入bootstrap.min.js务必先引入jquery -->
+     <script src="js/jquery-3.1.1/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+   
+     <!-- Bootstrap 核心js文件 -->
+    <script src="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- 输入框组 -->
+    <div class="input-group input-group">
+        <span class="input-group-addon">用户名</span>
+        <input type="text" class="from-control" placeholder="Username">
+ </div>
+ <br>
+ <br>
+ <br>
+ <!-- 搜索框 -->
+ <div class="input-group input-group">
+    <input type="text" class="from-control" placeholder="Username">
+  
+  <span class="input-group-btn">
+    <input type="submit" value="开始搜索" class="btn btn-danger">
+  </span>
+ </div>
+  <br>
+  <div class="input-group input-group">
+    <input type="text" class="from-control" placeholder="Username">
+  <span class="input-group-btn">
+    <input type="submit" value="百度一下" class="btn btn-danger">
+  </span>
+</div>
+<br>
+<br>
+<br>
+<!-- 作为额外元素的按钮时下拉菜单 -->
+<div class="col-lg-6">
+    <div class="input-group">
+    <input type="text" class="from-control" aria-label="...">
+    <div class="input-group-byn">
+    <button type="button" class="btn btn-default dropdown-toggle"
+     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">请选择
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">国籍</a></li>
+            <li><a href="#">省份</a></li>
+            <li><a href="#">市级</a></li>
+            <!-- <li role="separator" class="divider"><li> -->
+            <li><a href="#">区</a></li>
+            <li><a href="#">详细地址</a></li>
+        </ul>
+    </div> <!-- /btn-group -->
+   </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+<br>
+<br>
+<br>
+  <!-- 导航 -->
+  <!-- 标签类 -->
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">首页</a></li>
+    <li role="presentation"><a href="#">个人信息</a></li>
+    <li role="presentation"><a href="#">个性签名</a></li>
+    <li role="presentation" class="active"><a href="#">相册</a></li>
+    <li role="presentation"><a href="#">说说</a></li>
+</ul>
+<!-- 胶囊式标签页 -->
+<ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">校园文化</a></li>
+    <li role="presentation"><a href="#">优秀学员</a></li>
+    <li role="presentation"><a href="#">个人荣誉</a></li>
+</ul>
+</body>
+</html>

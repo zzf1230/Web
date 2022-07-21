@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 谁过渡就在谁那里加过渡 */
+            /* transition: width 1s,background 2s; */
+            transition: all 1s;
+
+        }
+        .box:hover{
+           width: 500px;
+           background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        过渡：
+        作用：让元素样式慢慢的变化，常配合hover使用
+        属性名：transition
+        常见取值：
+        all ：所有的属性都过渡
+        过渡时长：数字+s
+     -->
+     <div class="box"></div>
+</body>
+</html>

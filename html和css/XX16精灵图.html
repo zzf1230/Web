@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            background-color: pink;
+            background-image: url(img/taobao.png);  
+            /*改变背景图位置 background-position:水平位置 垂直位置*/
+            background-position: -3px 0;
+            /* 背景图片大小：
+            background-size：宽高
+            取值：数字+px  简单方便，常用
+                  百分比   相当于当前盒子自身宽高百分比
+                  contain  包含，将背景图片等比例缩放，直到不会超过盒子的最大
+                  cover    覆盖，将背景图片等比例缩放，直至刚好填满整个盒子没有空白
+            */
+
+            /* background连写拓展：
+            background：color image repeat position/size 
+            一般单独设置position-size
+            */
+        }
+    </style>
+</head>
+<body>
+    <!-- 精灵图:
+        场景：项目中将多个图片，合成一张大图片，这张大图就是精灵图
+    优点能减少服务器发送次数，减轻服务器压力 
+        使用步骤：
+        1.创建一个盒子，设置盒子尺寸和小图尺寸相同
+        2.将精灵图设置为盒子的背景图片
+        3.修改背景图位置，分别取负值设置盒子的background-position：x y
+    -->
+    <span></span>
+</body>
+</html>

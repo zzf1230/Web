@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap 核心css文件 -->
+     <link rel="stylesheet" href="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  
+     <!--Jquery 核心文件  -->
+     <!-- 引入bootstrap.min.js务必先引入jquery -->
+     <script src="js/jquery-3.1.1/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+   
+     <!-- Bootstrap 核心js文件 -->
+    <script src="pluqins/bootstrap-3.4.1-dist/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- 默认导航条  -->
+    <nav class="navbar navbar-default">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">网页首页</a></li>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">产品中心</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+        </div>
+    </nav>
+<br>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="#">首页</a></li>
+        <li role="presentation"><a href="#">菜单</a></li>
+        <li role="presentation"><a href="#">公司简介</a></li>
+        <li role="presentation"><a href="#">在线留言</a></li>
+        <li role="presentation"><a href="#">帮助中心</a></li>
+    </ul>
+    <br>
+    <nav class="navbar navbar-default" style="background-color: aqua; width: 600px; height: 10px;" >
+        <div class="navbar-header">
+            <a class="navbar-brand"  style="background-color: red; width: 100px; height: 50px;" href="#">Bread</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">网站首页</a></li>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <img src="img/1.jpg" style="width: 600px; height: 400px;">
+    <!-- 圆形图片 -->
+    <div>
+        <img src="img/1.jpg" alt="" width="100px" height="100px" class="img-circle">
+    </div>
+    <from class="navbar-form navbar-lrft" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="search">
+            <!-- 照相机图标 -->
+            <span class="glyphicon glyphicon-camera"></span>
+        </div>
+        <!-- 百度搜索栏 -->
+        <button type="submit" class="btn btn-primary">百度一下</button>
+    </from>
+    <br>
+    <!-- 输入框组-右按钮 -->
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control" placeholder="Username">
+        <span class="input-group-btn">
+            <input type="submit" value="百度一下" class="btn btn-primary">
+        </span>
+    </div>
+
+
+    <!-- 导航条表单 -->
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <form class="navbar-from navbar-left">
+            <div class="from-group">
+                <input type="text" class="from-control" placeholder="search">
+            </div>
+            <button type="sumit" class="btn btn-default">Sumit</button> 
+        </form>
+    </nav>
+
+    <!-- 导航条按钮 -->
+    <nav class="navbar navbar-default">
+        <div class="navbar navbarr-header">
+            <a class="navbar-brand" href="#">百度</a>
+        </div>
+        <button type="button" type="button" class="btn btn-default navbar-btn">百度一下</button>
+    </nav>
+
+    <!-- 导航条文本 -->
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">世界树</a>
+        </div>
+        <p class="navbar-text">欢迎来到世界树！</p>
+    </nav>
+
+    <!-- 导航条定位 -->
+    <!-- navbar-fixed-top顶部；botton底部 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+            <a href="#" class="navbar-brand">世界树</a>
+            </div>
+            <p class="navbar-text">
+                欢迎来到世界树！
+                <a href="#" class="navbar-link">bootstrap</a>
+            </p>
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">备案号</a>
+            </div>
+            <p class="navbar-text">
+                百度
+                <a href="www.acgycy.com/wp-json/sakura/v1/image/cover?type=mobile" class="navbar-link">每日一图</a>
+                <a href="#" class="navbar-link">帮助中心</a>
+            </p>
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">关于百度</a>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html> 

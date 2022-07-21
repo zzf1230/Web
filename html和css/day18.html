@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            float: left;
+            margin: 10px;
+        }
+        div:nth-child(2) {
+            border: 1px solid green;
+        }
+        div:nth-child(3) {
+            border: 1px solid blue;
+        
+        }
+        p {
+            height: 25px;
+            background-color: pink;
+            line-height: 25px;
+            text-align: center;
+        }
+    </style>
+             <!-- 拖拽 -->
+<body>
+    <div id="divl">
+        <p id="p1" draggable="true">拖拽内容1</p>
+        <p id="p2" draggable="true">拖拽内容2</p>
+        <p id="p3" draggable="true">拖拽内容3</p>
+        <p id="p4" draggable="true">拖拽内容4</p>
+    </div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        //当拖拽开始时触发
+        document.ondragstart = function(event) {
+            console.log('源对象开始被拖动');
+            console.log(event.target.id);
+            event.dataTransfer.setData('text/html',event.target.id);//传递id值
+        };
+        //作用于整个拖拽过程 （不断被执行）
+        document.ondrag = function(event) {
+            console.log('源对象被拖拽过程中');
+        };
+        //当拖拽结束时触发
+        document.ondragend = function(event) {
+        console.log('源对象被拖拽结束');
+        };
+
+     // 设置元素释放效果
+    //当源对象进入目标元素时
+    document.ondragenter = function(event) {
+        console.log('目标对象被源对象拖动着进入');
+        console.log(event.target);
+    };
+    //当源对象悬停在目标元素上方上时触发
+    document.ondragover = function(event) {
+        console.log('源对象悬停在目标元素上方');
+        return false;
+    };
+    //当源对象离开目标元素时
+    document.ondragleave = function() {
+        console.log('离开了');
+    };
+    //当源对象在目标元素上释放鼠标时
+    document .ondrop = function(event) {
+        console.log('上方释放/松手');
+        var id = event.dataTransfer.getData('text/html');
+        event.target.appendChild(document.getElementById(id));
+    };
+    </script>
+  
+</body>
+</html>

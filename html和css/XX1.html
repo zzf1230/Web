@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .size{
+        font-size: 100px;
+        }
+
+        div p{
+                color: aqua
+        }
+        div>p {
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 伪类选择器 css样式 x：hover{} 鼠标悬停时的状态-->
+    <!-- 子代选择器 css样式 div>p -->
+    <div>
+        <p>这是div标签的儿子</p>
+        <a href="#" div的儿子 a标签
+        <p>div标签的孙子,a的儿子</p>
+    </a>
+    </div>
+
+    <!-- 交集选择器 xxx.x{} css样式 div.p{}-->
+    <!-- 并集选择器 xxx，xxx，xxx{} 同时选择多个标签进行属性赋值 div,p,a{}-->
+
+
+    <!-- 后代选择器 css样式为 div p{} -->
+    <div>
+        <p>这是div标签的儿子</p>
+    </div>
+
+        <!--标签居中 margin：0 auto  -->
+
+    <!-- 文本修饰 text-decoration 属性underline 下划线 -->
+    <!-- 标签选择器 x{} -->
+    <!-- 通配符选择器 *{} -->
+    <!-- id 选择器   #xxx{}-->
+
+<!-- 类选择器 .xxx{} 可以设置多个类 空格隔开 -->
+    <p class="red size">1</p>
+
+    <!-- 当点击字时也能选中 -->
+    性别：
+    <!-- lable 绑定表单元素 -->
+    <input type="radio" name="sex" id="nan"><label for="nan">男</label>
+    <label><input type="radio" name="sex">女</label>
+</body>
+</html>
